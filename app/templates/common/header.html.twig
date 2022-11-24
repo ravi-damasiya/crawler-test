@@ -1,0 +1,8 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+    <div class="container">
+        <a class="navbar-brand" href="{{ app.user ? path('news_list') : path('app_login') }}">Symfony News</a>
+        {% if app.user %}
+            <a class="nav-link" href="{{ path('app_logout') }}">{{ 'Logout' }}</a>
+        {% endif %}
+    </div>
+</nav>
